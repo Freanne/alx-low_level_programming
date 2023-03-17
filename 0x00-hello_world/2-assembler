@@ -1,2 +1,2 @@
 #!/bin/bash
-export CFILE=main.c && BASENAME=$(basename "${CFILE%.c}") && ASFILE="$BASENAME.s" && gcc -S "$CFILE" -o "$ASFILE" > ${CFILE%.c}.log 
+export CFILE="${CFILE:-main.c}" && OUTFILE="${CFILE%.c}.s" && gcc -S "$CFILE" -o "$OUTFILE"
