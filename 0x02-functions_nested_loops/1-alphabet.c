@@ -3,7 +3,9 @@
 #include<stdlib.h>
 #include <unistd.h>
 /**
- * print_alphabet - Prints the alphabet in lowercase, followed by a newline character.
+ * print_alphabet - Prints the alphabet 
+ * in lowercase, 
+ * followed by a newline character.
  *
  * Return: void.
  */
