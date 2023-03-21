@@ -21,6 +21,6 @@ lastdigit *= -1;
 
 /* imprimer la dernière chiffre */
 printf("%d%d",lastdigit,lastdigit);
-
+return (0);
 }
 
