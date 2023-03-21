@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * main - check the code.
+ * function - _islower.
  *
- * Return: Always 0.
+ * Return: 0 if c is lowercase 1 otherwise.
  */
 int _islower(int c)
 {

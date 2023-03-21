@@ -3,9 +3,9 @@
 #include<stdlib.h>
 #include <unistd.h>
 /**
- * main - check the code
+ *function - print_alphabet_x10
  *
- * Return: Always 0.
+ * Return: void.
  */
 
 void print_alphabet(void)
