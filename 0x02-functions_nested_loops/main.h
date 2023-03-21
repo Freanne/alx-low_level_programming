@@ -1,16 +1,5 @@
-int _putchar(char c)
-{
-return (write(1,&c,1));
-}
-void print_alphabet(void)
-{
-
-char letter = 'a';
-
-while (letter <= 'z')
-{
-_putchar(letter);
-letter++;
-}
-_putchar('\n');
-}
+#ifndef HEADER_FILE
+#define HEADER_FILE
+int _putchar (char c);
+void print_alphabet(void);
+#endif
