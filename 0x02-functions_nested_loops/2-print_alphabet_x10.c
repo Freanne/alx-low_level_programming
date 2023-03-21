@@ -3,7 +3,9 @@
 #include<stdlib.h>
 #include <unistd.h>
 /**
- * print_alphabet_x10 - Prints the alphabet in lowercase ten times, each time followed by a newline character.
+ * print_alphabet_x10 - Prints the alphabet
+ * in lowercase ten times,
+ * each time followed by a newline character.
  *
  * Return: void.
  */
