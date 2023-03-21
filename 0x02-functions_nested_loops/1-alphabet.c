@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include <unistd.h>
 /**
- *function - print_alphabet_x10
+ * print_alphabet - Prints the alphabet in lowercase, followed by a newline character.
  *
  * Return: void.
  */

@@ -3,11 +3,10 @@
 #include<stdlib.h>
 #include <unistd.h>
 /**
- * function - print_alphabet_x10
+ * print_alphabet_x10 - Prints the alphabet in lowercase ten times, each time followed by a newline character.
  *
- * 
+ * Return: void.
  */
-
 void print_alphabet_x10(void)
 {
 char letter = 'a';
