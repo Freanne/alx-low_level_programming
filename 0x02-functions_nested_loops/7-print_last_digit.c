@@ -20,7 +20,7 @@ lastdigit *= -1;
 }
 
 /* imprimer la dernière chiffre */
-printf("%d%d",lastdigit,lasdigit);
+printf("%d%d",lastdigit,lastdigit);
 //return (lastdigit);
 }
 
