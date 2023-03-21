@@ -5,7 +5,8 @@
  * print_last_digit - Prints the last digit of a number.
  * @n: The number to be checked.
  *
- * Return : value of lastdigit.
+ * Return : lastdigit if lastdigit is greater than zero
+ * -lastdigit if lastdigit is less than zero and print lastdigit.
  */
 int print_last_digit(int n)
 {
