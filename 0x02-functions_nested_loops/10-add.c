@@ -2,7 +2,8 @@
 #include "main.h"
 /**
  * add - Adds two integers and returns the result.
- *@n and @m :The numbers to be checked0.
+ *@n:The numbers to be checked.
+ *@m :The numbers to be checked.
  *
  * Return: n + m.
  */
