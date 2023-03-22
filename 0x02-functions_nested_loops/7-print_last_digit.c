@@ -9,7 +9,7 @@
  * Return: If lastdigit is greater than zero, return lastdigit.
  *         If lastdigit is less than zero, print lastdigit
  *         and return -lastdigit.
- *
+ */
 int print_last_digit(int n)
 {
 int lastdigit;
