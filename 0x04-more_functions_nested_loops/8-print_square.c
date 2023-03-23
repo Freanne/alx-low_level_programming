@@ -3,7 +3,8 @@
 #include<stdlib.h>
 #include <unistd.h>
 /**
- * print_square - Prints a square, followed by a new line.
+ * print_square - Prints a square,
+ * followed by a new line.
  * @size : the size of the square.
  *
  * Return: void.
@@ -18,7 +19,7 @@ for (i = 0; i < size; i++)
 {
 for (k = 0; k < size; k++)
 {
-putchar('#');
+_putchar('#');
 }
 _putchar('\n');
 }
