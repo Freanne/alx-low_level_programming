@@ -3,6 +3,8 @@
 /**
  * print_triangle - prints a triangle of size 'size'
  * @size: the size of the triangle
+ *
+ * Return : void.
  */
 void print_triangle(int size)
 {
@@ -13,11 +15,15 @@ _putchar('\n');
 return;
 }
 
-for (i = size; i >= 1; i--) {
-for (j = 1; j <= size; j++) {
-if (j < i) {
+for (i = size; i >= 1; i--)
+{
+for (j = 1; j <= size; j++)
+{
+if (j < i)
+{
 _putchar(' ');
-} else {
+} else
+{
 _putchar('#');
 }
 }_putchar('\n');
