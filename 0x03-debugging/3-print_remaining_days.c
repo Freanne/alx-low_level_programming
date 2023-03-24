@@ -10,14 +10,15 @@
 
 void print_remaining_days(int month, int day, int year)
 {
+    int days_in_month[] = {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};
+    int day_of_year = days_in_month[month - 1] + day;
     if (month > 2 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0))
     {
         day++;
     }
 
-    int days_in_month[] = {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};
 
-    int day_of_year = days_in_month[month - 1] + day;
+
 
     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
     {
