@@ -5,7 +5,7 @@
  * _strlen - returns the length of a string.
  *@s:The characteres to be checked.
  *
- * Return: a and b.
+ * Return: length of s.
  */
 
 
