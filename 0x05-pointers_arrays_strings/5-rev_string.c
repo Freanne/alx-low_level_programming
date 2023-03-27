@@ -12,11 +12,12 @@
 
 void rev_string(char *s)
 {
-int i;
+int length = strlen(s), i;
 
-for (i = strlen(s) - 1; i >= 0; i--)
+for (i = 0; i < length / 2; i++)
 {
-printf("%c", s[i]);
+char temp = s[i];
+s[i] = s[length - i - 1];
+s[length - i - 1] = temp;
 }
-
 }
