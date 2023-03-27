@@ -25,7 +25,7 @@ printf("\n");
 }
 else
 {
-int n = (strlen(str) - 1) / 2, i;
+int n = (strlen(str) +  1) / 2, i;
 
 for (i = n; i < l; i++)
 {
