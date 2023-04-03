@@ -4,7 +4,7 @@
 
 /**
  * _memset - Fills memory with a constant byte.
- * @*s : The pointer to be checked.
+ * @s : The character to be checked.
  * @b : The character to be checked.
  * @n : The number to be checked.
  *
@@ -13,8 +13,5 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned char *p = s;
-while (n--)
-*p++ = (unsigned char) b;
-return s;
+return (memset(s, b, n));
 }
