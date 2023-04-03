@@ -6,7 +6,7 @@
  * _memset - Fills memory with a constant byte.
  * @*s : The pointer to be checked.
  * @b : The character to be checked.
- * @ : The number to be checked.
+ * @n : The number to be checked.
  *
  * Return : A pointer to the memory area s.
  */
