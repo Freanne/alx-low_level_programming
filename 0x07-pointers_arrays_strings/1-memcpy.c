@@ -4,12 +4,11 @@
 
 /**
  * _memcpy - Copy memories area.
- * @*dest : the destination .
- * @*src : The source 
- * @*n : The numbers.
+ * @dest : the charactere to be checked.
+ * @src : The characte to be checked.
+ * @n : The numbers to be checked.
  *
- * Return : A pointer to dest .
- *
+ * Return : A pointer to dest.
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
