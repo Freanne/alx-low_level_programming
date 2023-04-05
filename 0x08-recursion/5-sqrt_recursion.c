@@ -1,20 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 #include <string.h>
-/**
- * _sqrt_recursion - Calculates the square root of a number.
- * @n: The number to calculate the square root of.
- * Return: The square root of the number.
- */
-int _sqrt_recursion(int n)
-{
-if (n == 0 || n == 1)
-return n;
-else if (n < 0)
-return -1;
-else
-return _sqrt_helper(n, 1, n);
-}
 
 /**
  * _sqrt_helper - Helper function for calculating the square root of a number.
@@ -34,3 +20,20 @@ return _sqrt_helper(n, mid + 1, end);
 else
 return _sqrt_helper(n, start, mid - 1);
 }
+
+/**
+ * _sqrt_recursion - Calculates the square root of a number.
+ * @n: The number to calculate the square root of.
+ * Return: The square root of the number.
+ */
+int _sqrt_recursion(int n)
+{
+if (n == 0 || n == 1)
+return n;
+else if (n < 0)
+return -1;
+else
+return _sqrt_helper(n, 1, n);
+}
+
+
