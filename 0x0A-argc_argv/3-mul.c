@@ -21,7 +21,9 @@ printf("Error\n");
 return (1);
 }
 if (x == 0 || y == 0)
-printf ("Error");
+printf("Error\n");
+if (argc == 0)
+printf("Error\n");
 
 return (0);
 }
