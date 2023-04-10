@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
- * @argc : The number of command-line arguments
- * @argv : An array of pointers to the arguments
+ *main - Entry point
+ *@argc : The number of command-line arguments.
+ *@argv : An array of pointers to the arguments.
  *
  * 
- * Return : Always 0.
+ *Return : Always 0.
  */
 
 int main(int argc, char *argv[])
