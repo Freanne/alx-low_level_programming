@@ -2,14 +2,18 @@
 #include <stdlib.h>
 
 /**
- * main - Prints its name
+ * main - Entry point
+ * @argc : The number of command-line arguments
+ * @argv : An array of pointers to the arguments
  *
- * Return :void.
+ * 
+ * Return : Always 0.
  */
 
 int main(int argc, char *argv[])
 {
 printf("%d", argc);
+
 printf("%s\n", argv[0]);
 
 
