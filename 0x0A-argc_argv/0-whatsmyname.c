@@ -7,9 +7,11 @@
  * Return :void.
  */
 
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
+printf("%d", argc);
 printf("%s\n", argv[0]);
+
 
 return (0);
 }
