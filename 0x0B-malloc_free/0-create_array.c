@@ -16,14 +16,14 @@
 
 char *create_array(unsigned int size, char c)
 {
-char *tab = (char *) malloc(size * sizeof(char))';
+char *tab = (char *) malloc(size * sizeof(char));
 int i;
 
 for (i = 0; i < size; i++)
 {
 tab[i] = c;
 }
-return *tab;
+return tab;
 if (size == 0)
 return NULL;
 
