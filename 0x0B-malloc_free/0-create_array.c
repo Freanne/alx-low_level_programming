@@ -8,7 +8,7 @@
  * @size : The number to be checked.
  * @c : The character to be checked.
  *
- * Return : NULL if size is equal 0,tab is success , ULL if fails.
+ * Return : a pointer to the created array, or NULL if it fails
  *
  *
  *
@@ -16,18 +16,20 @@
 
 char *create_array(unsigned int size, char c)
 {
-char *tab = (char *) malloc(size * sizeof(char));
+char *tab;
 unsigned int i;
 
-for (i = 0; i < size; i++)
-{
-tab[i] = c;
-}
-return (tab);
 if (size == 0)
 return (NULL);
 
+tab = malloc (size * sizeof(char));
+
 if (tab == NULL)
 return (NULL);
+
+for (i = 0; i < size; i++)
+tab[i] = c;
+
+return (tab);
 
 }
