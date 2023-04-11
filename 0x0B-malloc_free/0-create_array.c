@@ -6,9 +6,9 @@
  * create_array - Creates an array of chars
  * and initializes it with a specific char.
  * @size : The number to be checked.
- * @char : The character to be checked.
+ * @c : The character to be checked.
  *
- * return : NULL if size is equal 0 , a pointer to the array tab . 
+ * Return : NULL if size is equal 0,tab is success , ULL if fails.
  *
  *
  *
@@ -23,11 +23,11 @@ for (i = 0; i < size; i++)
 {
 tab[i] = c;
 }
-return tab;
+return (tab);
 if (size == 0)
-return NULL;
+return (NULL);
 
 if (tab == NULL)
-return NULL;
+return (NULL);
 
 }
