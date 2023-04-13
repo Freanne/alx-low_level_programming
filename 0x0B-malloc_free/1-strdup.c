@@ -19,7 +19,7 @@ int length = strlen(str);
 char *chaine = malloc(length * sizeof(char));
 
 
-chaine = strcpy(chaine, s);
+chaine = strcpy(chaine, str);
 return (chaine);
 free(chaine);
 if (str == NULL)
