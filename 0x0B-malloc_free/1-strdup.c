@@ -18,7 +18,8 @@ char *_strdup(char *str)
 int length = strlen(str);
 char *chaine = malloc(length * sizeof(char));
 
-
+if (str == NULL)
+return (NULL);
 chaine = strcpy(chaine, str);
 return (chaine);
 free(chaine);
