@@ -23,13 +23,25 @@ s1 = "";
 if (s2 == NULL)
 s2 = "";
 
-if (ch1 == NULL || ch2 == NULL)
+if (ch1 == NULL && ch2 != NULL)
 {
 free(ch1);
 free(ch2);
-return (NULL);
-
+return (ch2);
 }
+if (ch1 != NULL && ch2 == NULL)
+{
+free(ch1);
+free(ch2);
+return (ch1);
+}
+if (ch1 == NULL && ch2 == NULL)
+{
+free(ch1);
+free(ch2);
+return ("");
+}
+
 strcpy(ch1, s1);
 strcpy(ch2, s2);
 
