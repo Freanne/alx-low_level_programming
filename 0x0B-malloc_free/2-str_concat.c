@@ -13,13 +13,15 @@
 
 char *str_concat(char *s1, char *s2)
 {
+
+int len1 = strlen(s1), len2 = strlen(s2);
+char *ch1 = malloc(len1 * sizeof(char)), *ch2 = malloc(len2 * sizeof(char));
+
+
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-
-int len1 = strlen(s1), len2 = strlen(s2);
-char *ch1 = malloc(len1 * sizeof(char)), ch2 = malloc(len2 * sizeof(char));
 
 if (ch1 == NULL || ch2 == NULL)
 {
