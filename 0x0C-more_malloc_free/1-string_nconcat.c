@@ -17,7 +17,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 
-int len1 = strlen(s1), len2 = strlen(s2);
+unsigned int len1 = strlen(s1), len2 = strlen(s2);
+char *chaine = malloc( len1 + n + 1);
 
 if (s1 == NULL)
 s1 = "";
@@ -27,14 +28,13 @@ s2 = "";
 if (n >= len2)
 n = len2;
 
-char *chaine = malloc((len1 +n) * sizeof(char));
 
 if (chaine == NULL)
 return (NULL);
 
-memcpy(chaine, s1, s1_len);
-memcpy(chaine + s1_len, s2, n);
-chaine[s1_len + n] = '\0';
+memcpy(chaine, s1, len1);
+memcpy(chaine + len1, s2, n);
+chaine[len1 + n] = '\0';
 
 return (chaine);
 
