@@ -12,8 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-int result = 0, i, j;
-
+int result = 0, i = 1, j;
+int num = atoi(argv[i]);
 
 if (argc == 1) {
 printf("0\n");
@@ -28,7 +28,6 @@ printf("Error\n");
 return (1);
 }
 }
-int num = atoi(argv[i]);
 
 if (num < 0) {
 printf("Error\n");
