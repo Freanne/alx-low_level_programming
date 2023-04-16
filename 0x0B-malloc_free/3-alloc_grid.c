@@ -7,7 +7,8 @@
  * @width : The width of the array.
  * @heigth : the heigth of the array.
  *
- * Return : A pointer to a 2 dimensional array of integers.
+ * Return : On success, returns a pointer to the newly created array.
+ *On failure,returns NULL.
  */
 
 
