@@ -5,9 +5,8 @@
 
 
 /**
- * print_dog - print a struct dog 
- * @d : the information of dog or an object of struct dog.
- *
+ * print_dog - prints a struct dog
+ * @d: pointer to struct dog
  * Return : void.
  */
 
