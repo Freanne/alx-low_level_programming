@@ -8,7 +8,6 @@
  * @name: the name of the dog
  * @age :the age of the dog
  * @owner : the name of the dog
- *
  * Return: a pointer to the new dog, or NULL if it fails
  */
 
