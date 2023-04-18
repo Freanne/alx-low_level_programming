@@ -7,35 +7,40 @@
  * new_dog - Creates a new dog with the given parameters.
  * @name: the name of the dog
  * @age :the age of the dog
- * @owner : the name of the dog's owner
- * Returns:a pointer to the new dog or NULL if it fails
+ * @owner : the name of the dog
+ *
+ * Return: a pointer to the new dog, or NULL if it fails
  */
 
 
 dog_t *new_dog(char *name, float age, char *owner)
-
 {
-dog_t *new_dog = malloc(sizeof(dog_t));
-if (new_dog == NULL) {
-return (NULL);
-}
 
-new_dog->owner = malloc(strlen(name) + 1);
-if (new_dog->name == NULL) {
+dog_t *new_dog;
+char *new_name, *new_owner;
+
+new_dog = malloc(sizeof(dog_t));
+if (new_dog == NULL)
+return (NULL);
+
+new_name = malloc(strlen(name) + 1);
+if (new_name == NULL)
+{
 free(new_dog);
 return (NULL);
 }
-strcpy(new_dog->name, name);
-new_dog->owner = malloc(strlen(owner) + 1);
-if (new_dog->owner == NULL){
-free(new_dog->name);
+strcpy(new_name, name);
+new_owner = malloc(strlen(owner) + 1);
+if (new_owner == NULL)
+{
+free(new_name);
 free(new_dog);
 return (NULL);
 }
-strcpy(new_dog->owner, owner);
+strcpy(new_owner, owner);
+new_dog->name = new_name;
 new_dog->age = age;
-return new_dog;
-
-
-
+new_dog->owner = new_owner;
+return (new_dog);
 }
+
