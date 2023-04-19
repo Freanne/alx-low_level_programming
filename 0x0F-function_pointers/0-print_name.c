@@ -6,7 +6,6 @@
  * print_name - Print a name.
  * @name : A pointer to describe the name.
  * @f : A function pointer to a function that print a name.
- *
  * Return :void.
  */
 
