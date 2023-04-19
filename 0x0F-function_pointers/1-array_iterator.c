@@ -3,11 +3,10 @@
 #include "function_pointers.h"
 
 /**
- * array_iterator - executes a function given as a parameter on each element of an array.
- * @array : The array pointer.
- * @size : The size of array.
- * @action : the function pointer.
- *
+ * array_iterator - executes a function on each element of an array.
+ * @array : pointer to the array of integers.
+ * @size : size of the array.
+ * @action : pointer to the function to be executed on each element
  * Return :void.
  */
 
@@ -17,7 +16,10 @@ size_t i;
 
 if (array == NULL || action == NULL)
 return;
+
 for (i = 0; i < size; i++)
-{action(array[i]);}
+{
+action(array[i]);
+}
 
 }
