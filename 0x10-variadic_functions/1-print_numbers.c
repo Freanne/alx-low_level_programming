@@ -6,8 +6,7 @@
 /**
  * print_numbers - Prints numbers, followed by a new line.
  * @separator : The string to be printed between numbers.
- * @n : Th number of integer passed to the function
- *
+ * @n : The number of integer passed to the function
  * Return :void.
  */
 
@@ -22,9 +21,8 @@ for (i = 0; i < n; i++)
 {
 tmp = va_arg(arg, int);
 printf("%d", tmp);
-if (separator == NULL)
-return;
-else
+
+if (i < n - 1 && separator != NULL) 
 printf("%s",separator);
 }
 va_end(arg);
