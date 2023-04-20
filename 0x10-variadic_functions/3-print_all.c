@@ -20,42 +20,38 @@ void print_all(const char * const format, ...)
 {
 unsigned int i = 0;
 va_list args;
-char *separator = "";
-const char * const specifiers = "cifs";
+char *str, *sep = "";
 
-va_start(args, format);
+va_starEt(args, format);
 
 while (format && format[i])
 {
-
-if (format[i] == specifiers[0] || format[i] == specifiers[1] || format[i] == specifiers[2] || format[i] == specifiers[3])
-{
-
-printf("%s", separator);
-
 switch (format[i])
 {
 case 'c':
-printf("%c", va_arg(args, int));
+printf("%s%c", sep, va_arg(args, int));
 break;
 case 'i':
-printf("%d", va_arg(args, int));
+printf("%s%d", sep, va_arg(args, int));
 break;
 case 'f':
-printf("%f",(float)va_arg(args, double));
+printf("%s%f", sep, va_arg(args, double));
 break;
 case 's':
-printf("%s", va_arg(args, char *));
+str = va_arg(args, char *);
+if (str == NULL)
+str = "(nil)";
+printf("%s%s", sep, str);
 break;
 default:
-break;
-}
-separator = ", ";
+i++;
+continue;
 }
 
+sep = ", ";
 i++;
 }
-va_end(args);
-putchar('\n');
 
+putchar('\n');
+va_end(args);
 }
