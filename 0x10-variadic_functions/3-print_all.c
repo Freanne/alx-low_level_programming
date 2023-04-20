@@ -22,7 +22,7 @@ unsigned int i = 0;
 va_list args;
 char *str, *sep = "";
 
-va_starEt(args, format);
+va_start(args, format);
 
 while (format && format[i])
 {
