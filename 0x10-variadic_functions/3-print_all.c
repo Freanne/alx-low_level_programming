@@ -45,9 +45,6 @@ case 'f':
 printf("%f",(float)va_arg(args, double));
 break;
 case 's':
-if ((va_arg(args, char *)) == NULL)
-printf("(nil)");
-else
 printf("%s", va_arg(args, char *));
 break;
 default:
