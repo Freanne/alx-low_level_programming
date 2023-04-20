@@ -36,16 +36,16 @@ printf("%s", separator);
 switch (format[i])
 {
 case 'c':
-printf("%c", va_args(args, int);
+printf("%c", va_arg(args, int));
 break;
 case 'i':
-printf("%d", va_args(args, int);
+printf("%d", va_arg(args, int));
 break;
 case 'f':
-printf("%f",(float)va_args(args, double);
+printf("%f",(float)va_arg(args, double));
 break;
 case 's':
-printf("%s", va_args(args, char *);
+printf("%s", va_arg(args, char *));
 break;
 default:
 break;
