@@ -4,25 +4,27 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - The sum of all its parametrs
- * @n : The number of integer for the function
+ * sum_them_all - returns the sum of all its parameters
+ * @n: number of arguments
  *
- * Return : The sum of all parameters
+ * Return: sum of all parameters
+ *         0 if n is 0
  */
-
 int sum_them_all(const unsigned int n, ...)
 {
+va_list args;
 unsigned int i;
-va_list arg;
-int sum, tmp;
+int sum = 0;
 
-sum = 0;
-va_start(arg, n);
+/* initialize variable argument list */
+va_start(args, n);
+
+/* iterate through arguments and sum them up */
 for (i = 0; i < n; i++)
-{
-tmp = va_arg(arg, int);
-sum += tmp;
-}
-va_end(arg);
+sum += va_arg(args, int);
+
+/* clean up variable argument list */
+va_end(args);
+
 return (sum);
 }
