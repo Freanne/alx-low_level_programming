@@ -10,19 +10,21 @@
  * Return : void.
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...) {
+void print_numbers(const char *separator, const unsigned int n, ...)
+{
 va_list args;
 
 /* initialize variable argument list */
 va_start(args, n);
 
 /* print each argument followed by separator */
-for (int i = 0; i < n; i++) {
+for (int i = 0; i < n; i++)
+{
 printf("%d", va_arg(args, int));
 
-if (i < n - 1 && separator != NULL) {
+if (i < n - 1 && separator != NULL)
 printf("%s", separator);
-}
+
 }
 
 /* clean up variable argument list */
