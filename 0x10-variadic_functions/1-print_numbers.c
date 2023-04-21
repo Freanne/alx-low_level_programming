@@ -13,12 +13,12 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 va_list args;
-
+unsigned int i;
 /* initialize variable argument list */
 va_start(args, n);
 
 /* print each argument followed by separator */
-for (int i = 0; i < n; i++)
+for (i = 0; i < n; i++)
 {
 printf("%d", va_arg(args, int));
 
