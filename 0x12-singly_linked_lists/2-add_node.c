@@ -8,22 +8,24 @@
  * @head : The pointer of the list_t node.
  * @str: the string to de added.
  *
- * Return : The adress of the new element, or NULL if it failed.
+ * Return: The address of the new node, or NULL if it failed.
  */
 
 list_t *add_node(list_t **head, const char *str)
 {
-list_t **p;
-while (head)
-{
+list_t *p;
+int l = 0;
+
 p = malloc(sizeof(list_t));
-p->str = str;
-p->next = head;
-head->next = NULL;
-head = p;
+if (p == NULL)
+return (NULL);
 
+while (str[l])
+l++;
+
+p->len = l;
+p->str = strdup(str);
+p->next = *head;
+*head = p;
+return (head);
 }
-return head;
-
-
-}	
