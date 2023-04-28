@@ -27,5 +27,5 @@ p->len = l;
 p->str = strdup(str);
 p->next = *head;
 *head = p;
-return (head);
+return (*head);
 }
