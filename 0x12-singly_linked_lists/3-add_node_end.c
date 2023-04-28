@@ -17,7 +17,7 @@ if (str == NULL)
 return (NULL);
 
     /* Allocate memory for the new node */
-new_node = malloc(sizeof(list_t)
+new_node = malloc(sizeof(list_t));
 if (new_node == NULL)
 return (NULL);
 
@@ -33,16 +33,14 @@ new_node->next = NULL;
 
 /* If the list is empty, make the new node the head */
 if (*head == NULL)
-{
 *head = new_node;
-}
 else
 {
 current = *head;
 while (current->next != NULL)
-{
 current = current->next;
-}
+
+
 current->next = new_node;
 }
 return (new_node);
