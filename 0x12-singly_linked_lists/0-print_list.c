@@ -15,10 +15,11 @@ size_t n = 0;
 while (h != NULL)
 {
 if (h->str == NULL)
-printf("[0] (nil)");
+printf("[0] (nil)\n");
 else
-printf("[%u] %s", h->len, h->str);
+printf("[%u] %s\n", h->len, h->str);
 
+h = h->next;
 n++;
 }
 return (n);
