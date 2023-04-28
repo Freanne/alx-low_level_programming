@@ -1,42 +1,48 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
 
 /**
- * add_node_end - Adds a new node at the end of a linked list
- * @head : The head pointer of node.
- * @str : the string to be added at the end.
+ * add_node_end - Adds a new node at the end of a list_t list.
+ * @head: A pointer to the head of the list.
+ * @str: The string to be added to the new node.
  *
- * Return: The address of the new node,
- * or NULL if it failed to allocate memory.
+ * Return: The address of the new node, or NULL if it failed.
  */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
-list_t *new, *current;
-int l;
+    list_t *new_node, *current;
 
-new = malloc(sizeof(list_t));
-if (p == NULL)
-return (NULL);
+    if (str == NULL)
+        return (NULL);
 
-while (str[l])
-l++;
+    /* Allocate memory for the new node */
+    new_node = malloc(sizeof(list_t));
+    if (new_node == NULL)
+        return (NULL);
 
-new->len = l;
-new->str = strdup(str);
-new->next = NULL;
+    /* Initialize the new node */
+    new_node->str = strdup(str);
+    if (new_node->str == NULL) {
+        free(new_node);
+        return (NULL);
+    }
+    new_node->len = strlen(str);
+    new_node->next = NULL;
 
-if (*head == NULL)
-*head = new;
-else
-{
-current = *head;
-while (current->next != NULL)
-	current = current->next;
+    /* If the list is empty, make the new node the head */
+    if (*head == NULL) {
+        *head = new_node;
+    } else {
+        /* Traverse the list to find the last node */
+        current = *head;
+        while (current->next != NULL) {
+            current = current->next;
+        }
+        /* Append the new node to the end of the list */
+        current->next = new_node;
+    }
 
-current->next = new;
+    return (new_node);
 }
-return (new);
-}
+
