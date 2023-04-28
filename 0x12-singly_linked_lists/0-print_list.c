@@ -4,14 +4,15 @@
 #include "lists.h"
 
 /**
- * print_list - Prints all elements of a mist_t list.
- * @h : The pointer of the node.
+ * print_list - Prints all elements of a linked list.
+ * @h : The pointer of the list_t to print.
  *
- * Return : The number of nodes.
+ * Return : The number of nodes printed.
  */
 size_t print_list(const list_t *h)
 {
 size_t n = 0;
+
 while (h != NULL)
 {
 if (h->str == NULL)
