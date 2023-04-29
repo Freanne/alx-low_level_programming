@@ -22,7 +22,7 @@ return (NULL);
 
 p->n = n;
 p->next = *head;
-p = *head;
+*head = p;
 
 return (*head);
 
