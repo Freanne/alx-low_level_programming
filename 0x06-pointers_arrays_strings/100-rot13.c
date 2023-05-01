@@ -23,5 +23,7 @@ else if (str[i] >= 'a' && str[i] <= 'z')
 {
 result[i] = (((str[i] - 'a') + 13) % 26) + 'a';
 }
+
 return (result);
+
 }
