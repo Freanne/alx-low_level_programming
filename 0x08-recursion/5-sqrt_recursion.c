@@ -1,39 +1,60 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include "main.h"
 #include <string.h>
 
 /**
- * _sqrt_helper - Helper function for calculating the square root of a number.
- * @n: The number to calculate the square root of.
- * @start: The starting point for the search.
- * @end: The ending point for the search.
- * Return: The square root of the number.
- */
-int _sqrt_helper(int n, int start, int end)
-{
-int mid = (start + end) / 2;
-
-if (mid * mid == n || (mid * mid < n && (mid + 1) * (mid + 1) > n))
-return (mid);
-else if (mid * mid < n)
-return (_sqrt_helper(n, mid + 1, end));
-else
-return (_sqrt_helper(n, start, mid - 1));
-}
-
-/**
- * _sqrt_recursion - Calculates the square root of a number.
- * @n: The number to calculate the square root of.
- * Return: The square root of the number.
+ * _sqrt_recursion - calculates the natural square root of a number
+ * @n: the number to calculate the square root of
+ *
+ * Return: the natural square root of n,
+ * or -1 if n does not have a natural square root
  */
 int _sqrt_recursion(int n)
 {
-if (n == 0 || n == 1)
-return (n);
-else if (n < 0)
+if (n < 0)
+{
 return (-1);
-else
-return (_sqrt_helper(n, 1, n));
 }
 
+if (n == 0 || n == 1)
+{
+return (n);
+}
+
+int root = _sqrt_helper(n, 0, n);
+
+return (root);
+}
+
+/**
+ * _sqrt_helper - helper function to recursively find the square root
+ * @n: the number to calculate the square root of
+ * @start: the starting value for the search range
+ * @end: the ending value for the search range
+ *
+ * Return: the natural square root of n within the search range,
+ * or -1 if not found
+ */
+int _sqrt_helper(int n, int start, int end)
+{
+if (start <= end)
+{
+int mid = (start + end) / 2;
+
+if (mid * mid == n)
+{
+return (mid);
+}
+else if (mid * mid < n)
+{
+return (_sqrt_helper(n, mid + 1, end));
+}
+else
+{
+return (_sqrt_helper(n, start, mid - 1));
+}
+}
+
+return (-1);
+}
 
