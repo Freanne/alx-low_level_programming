@@ -11,17 +11,19 @@
 
 int main(int argc, char **argv)
 {
-int num1 = atoi(argv[1]);
-int num2 = atoi(argv[2]);
-int result;
+int product;
 
+    /* Check if the program was executed with two arguments */
 if (argc != 3)
 {
 printf("Error\n");
 return (1);
 }
 
-result = num1 * num2;
-printf("%d\n", result);
+    /* Convert arguments to integers and multiply them */
+product = atoi(argv[1]) * atoi(argv[2]);
+
+    /* Print the result */
+printf("%d\n", product);
 return (0);
 }
