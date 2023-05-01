@@ -1,66 +1,37 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * str_concat - Concatenates two strings.
- * @s1 : The fistr string
- * @s2 : The twice string.
- *
- * Return : Pointer should point to a newly allocated space contain0s s1 and s1.
- */
-
+ * str_concat - concatenates two strings.
+ * @s1: first string.
+ * @s2: second string.
+ * Return: pointer to concatenated string, or NULL on failure.
+*/
 char *str_concat(char *s1, char *s2)
 {
-
-int len1 = strlen(s1), len2 = strlen(s2);
-char *ch1 = malloc(len1 * sizeof(char)), *ch2 = malloc(len2 * sizeof(char));
-char *chaine = malloc((len1 + len2) * sizeof(char));
+char *concat_str;
+unsigned int len1 = 0, len2 = 0, i, j;
 
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
 
-if (ch1 == NULL && ch2 != NULL)
-{
-free(ch1);
-free(ch2);
-return (ch2);
-}
-if (ch1 != NULL && ch2 == NULL)
-{
-free(ch1);
-free(ch2);
-return (ch1);
-}
-if (ch1 == NULL && ch2 == NULL)
-{
-free(ch1);
-free(ch2);
-return ("");
-}
+while (s1[len1] != '\0')
+len1++;
+while (s2[len2] != '\0')
+len2++;
 
-strcpy(ch1, s1);
-strcpy(ch2, s2);
-
-
-
-if (chaine == NULL)
-{
-free(ch1);
-free(ch2);
+concat_str = malloc(sizeof(char) * (len1 + len2 + 1));
+if (concat_str == NULL)
 return (NULL);
 
+for (i = 0; i < len1; i++)
+concat_str[i] = s1[i];
+for (j = 0; j < len2; j++, i++)
+concat_str[i] = s2[j];
 
-}
-strcpy(chaine, ch1);
-strcat(chaine, ch2);
+concat_str[i] = '\0';
 
-return (chaine);
-
-
-
-
+return (concat_str);
 }
