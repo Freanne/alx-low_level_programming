@@ -7,7 +7,8 @@
  * @argc: number of command line arguments
  * @argv: pointer to an array containing the arguments
  *
- * Return: 0 if success, 1 if incorrect number of arguments, 2 if negative number
+ * Return: 0 if success, 1 if incorrect number of arguments,
+ * 2 if negative number
  */
 int main(int argc, char **argv)
 {
