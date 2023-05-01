@@ -1,3 +1,2 @@
 #!/bin/bash
 if [ -z "$CFILE" ]; then echo "Error: CFILE environment variable is not set"; exit 1; fi; if [ ! -f "$CFILE" ]; then echo "Error: $CFILE does not exist"; exit 1; fi; BASENAME=$(basename "$CFILE" .c); OUTPUT="$BASENAME.s"; gcc -S -masm=intel "$CFILE" -o "$OUTPUT"; sed -i '1s/^/.intel_syntax noprefix\n/' "$OUTPUT"
-
