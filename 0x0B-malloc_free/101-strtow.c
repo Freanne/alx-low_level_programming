@@ -15,17 +15,14 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 			count++;
 	}
-
 	words = malloc(sizeof(char *) * (count + 1));
 	if (words == NULL)
 		return (NULL);
-
 	for (i = 0; i <= count; i++)
 	{
 		len = 0;
