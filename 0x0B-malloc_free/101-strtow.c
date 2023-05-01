@@ -1,56 +1,54 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /**
- * strtow - splits a string into words
- * @str: the string to split
+ * strtow - Splits a string into words
  *
- * Return: pointer to an array of strings (words), or NULL if failure
+ * @str: The string to split
+ *
+ * Return: Pointer to an array of strings (words)
+ *         NULL if str == NULL or str == ""
  */
 char **strtow(char *str)
 {
-	char **words;
-	int i, j, len, count = 0, start = 0;
+	int i, j, k, len, words;
+	char **arr;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
+	len = strlen(str);
+	for (i = 0, words = 0; i < len; i++)
 	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-			count++;
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+			words++;
 	}
-	words = malloc(sizeof(char *) * (count + 1));
-	if (words == NULL)
+	if (words == 0)
 		return (NULL);
-	for (i = 0; i <= count; i++)
+	arr = malloc(sizeof(char *) * (words + 1));
+	if (arr == NULL)
+		return (NULL);
+	for (i = 0, j = 0; j < words; j++)
 	{
-		len = 0;
-		for (j = start; str[j] != '\0'; j++)
+		while (str[i] == ' ')
+			i++;
+		for (k = i; str[k] != ' ' && k < len; k++)
+			;
+		arr[j] = malloc(sizeof(char) * (k - i + 1));
+
+		if (arr[j] == NULL)
 		{
-			if (str[j] == ' ')
-				start++;
-			else if (str[j + 1] == ' ' || str[j + 1] == '\0')
-			{
-				words[i] = malloc(sizeof(char) * (len + 2));
-				if (words[i] == NULL)
-				{
-					for (i = i - 1; i >= 0; i--)
-						free(words[i]);
-					free(words);
-					return (NULL);
-				}
-				for (j = 0; j <= len; j++)
-					words[i][j] = str[start + j];
-				words[i][len + 1] = '\0';
-				start += len + 2;
-				break;
-			}
-			else
-				len++;
+			for (j--; j >= 0; j--)
+				free(arr[j]);
+
+			free(arr);
+			return (NULL);
 		}
+		strncpy(arr[j], &str[i], k - i);
+		arr[j][k - i] = '\0';
+		i = k;
 	}
-	words[count] = NULL;
-	return (words);
+	arr[j] = NULL;
+	return (arr);
 }
 
