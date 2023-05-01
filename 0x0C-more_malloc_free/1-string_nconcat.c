@@ -9,33 +9,40 @@
  * @s2 : The character to be checked.
  * @n : The int.
  *
- * Return :   pointer shall point to a newly allocated space in memory,
+ * Return:   pointer shall point to a newly allocated space in memory,
  * which contains s1, followed by the first n bytes of s2,
  * and null terminated
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int len1 = 0, len2 = 0, len;
+	char *result, *p;
 
-unsigned int len1 = strlen(s1), len2 = strlen(s2);
-char *chaine = malloc( len1 + n + 1);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
+	if (n >= len2)
+		n = len2;
+	len = len1 + n;
 
-if (n >= len2)
-n = len2;
+	result = malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
+		return (NULL);
 
+	p = result;
+	while (*s1 != '\0')
+		*p++ = *s1++;
+	while (n-- > 0)
+		*p++ = *s2++;
+	*p = '\0';
 
-if (chaine == NULL)
-return (NULL);
-
-memcpy(chaine, s1, len1);
-memcpy(chaine + len1, s2, n);
-chaine[len1 + n] = '\0';
-
-return (chaine);
+	return (result);
 
 }

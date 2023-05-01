@@ -5,27 +5,26 @@
 
 /**
  * _calloc - Allocates memory for an array using malloc.
- * @nmemeb : the number
+ * @nmemb : the number
  * @size : the size of byte in memory
  *
- * Return : a pointer to the allocated in memory.
+ * Return: a pointer to the allocated in memory.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-void *p = malloc(nmemb * size);
+        char *ptr;
+        unsigned int i;
 
-if (nmemb == 0 || size == 0)
-return (NULL);
+        if (nmemb == 0 || size == 0)
+                return (NULL);
 
-if (p == NULL)
-return (NULL);
+        ptr = malloc(nmemb * size);
+        if (ptr == NULL)
+                return (NULL);
 
-memset(p, 0, nmemb * size);
+        for (i = 0; i < nmemb * size; i++)
+                *(ptr + i) = 0;
 
-return p;
-
-
-
-
+        return (ptr);
 }
