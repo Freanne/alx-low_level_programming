@@ -6,24 +6,22 @@
  * @argc : The number of arguments.
  * @argv : Array of pointer.
  *
- * Return : Always 0.
+ * Return: Always 0.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-int result, x = atoi(argv[1]), y = atoi(argv[2]);
+int num1 = atoi(argv[1]);
+int num2 = atoi(argv[2]);
+int result;
 
-result = x * y;
-printf("%d\n", result);
 if (argc != 3)
 {
 printf("Error\n");
 return (1);
 }
-if (x == 0 || y == 0)
-printf("Error\n");
-if (argc == 0)
-printf("Error\n");
 
+result = num1 * num2;
+printf("%d\n", result);
 return (0);
 }
