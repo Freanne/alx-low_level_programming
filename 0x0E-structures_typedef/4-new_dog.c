@@ -3,8 +3,8 @@
 #include <string.h>
 #include "dog.h"
 
-/*
- * new_dog - Creates a new dog with the given parameters.
+/**
+ * new_dog - Creates a new dog.
  * @name: the name of the dog
  * @age :the age of the dog
  * @owner : the name of the dog

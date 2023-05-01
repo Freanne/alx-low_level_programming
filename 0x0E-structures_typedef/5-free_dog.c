@@ -4,7 +4,7 @@
 
 /**
  * free_dog - Frees memory allocated for a dog_t object
- * @dog: Pointer to the dog_t object to free
+ * @d: Pointer to the dog_t object to free
  *
  * This function frees the memory allocated for a dog_t object,
  * including the memory allocated for its name and owner fields.
