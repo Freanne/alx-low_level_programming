@@ -3,19 +3,6 @@
 #include <ctype.h>
 
 /**
- * isdigit - checks if a given character is a digit
- *
- * @c: the character to check
- *
- * Return: 1 if @c is a digit, 0 otherwise
- */
-
-int isdigit(int c)
-{
-return (c >= '0' && c <= '9');
-}
-
-/**
  * main - Entry point.
  * @argc : The number of arguments.
  * @argv : The pointer.
