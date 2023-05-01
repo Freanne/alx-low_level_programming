@@ -6,7 +6,7 @@
  * @argc : The number to print the each arguments.
  * @argv : THe pointer .
  *
- * Return : Always 0.
+ * Return: Always 0.
  */
 
 
