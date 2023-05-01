@@ -4,6 +4,29 @@
 #include "main.h"
 
 /**
+ * is_prime - helper function for is_prime_number
+ * @n: the integer to check
+ * @i: the divisor to check n against
+ *
+ * Return: 1 if n is prime, otherwise 0
+ */
+int is_prime(int n, int i)
+{
+    /* Base cases */
+if (n < 2)
+return (0);
+if (i == 1)
+return (1);
+
+/* Check if n is divisible by i */
+if (n % i == 0)
+return (0);
+
+
+return (is_prime(n, i - 1));
+}
+
+/**
  * is_prime_number - checks if an integer is a prime number
  * @n: the integer to check
  *
@@ -11,26 +34,6 @@
  */
 int is_prime_number(int n)
 {
-int i;
-    /* Check if n is less than 2 */
-if (n < 2)
-return (0);
-
-    /* Check if n is 2 or 3 */
-if (n == 2 || n == 3)
-return (1);
-
-    /* Check if n is divisible by 2 or 3 */
-if (n % 2 == 0 || n % 3 == 0)
-return (0);
-
-    /* Check if n is divisible by any odd number greater than 3 */
-for (i = 5; i * i <= n; i += 2)
-{
-if (n % i == 0 || n % (i + 2) == 0)
-return (0);
-}
-
-return (1);
+return (is_prime(n, n - 1));
 }
 
