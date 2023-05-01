@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _pow_recursionb- The value of x raised to the power of y.
+ * _pow_recursion - The value of x raised to the power of y.
  * @x : THe value to raised.
  * @y : The power.
  *
