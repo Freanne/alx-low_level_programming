@@ -35,7 +35,7 @@ int _strlen(char *s)
  */
 void mul(char *num1, char *num2)
 {
-	int len1 = _strlen(num1;
+	int len1 = _strlen(num1);
 	int len2 = _strlen(num2);
 	int i, j, carry, n1, n2, res;
 	int *result;
@@ -46,13 +46,11 @@ void mul(char *num1, char *num2)
 		printf("Error\n");
 		exit(98);
 	}
-
 	for (i = len1 - 1; i >= 0; i--)
 	{
 		carry = 0;
 		n1 = num1[i] - '0';
-
-		for (j = len2 - 1; j >= 0; j--)
+	for (j = len2 - 1; j >= 0; j--)
 		{
 			n2 = num2[j] - '0';
 			res = n1 * n2 + result[i + j + 1] + carry;
@@ -76,7 +74,6 @@ void mul(char *num1, char *num2)
 
 		printf("\n");
 	}
-
 	free(result);
 }
 
