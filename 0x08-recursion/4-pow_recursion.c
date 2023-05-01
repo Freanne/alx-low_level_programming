@@ -7,7 +7,7 @@
  * @x : THe value to raised.
  * @y : The power.
  *
- * Return: The power y of x.
+ * Return: the value of x raised to the power of y, or -1 if y is negative
  */
 
 
