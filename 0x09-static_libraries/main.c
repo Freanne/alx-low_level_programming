@@ -1,18 +1,7 @@
-#include <stdio.h>
 #include "main.h"
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+
 int main(void)
 {
-
-    int r;
-
-	r = print_last_digit(98);
-	_putchar('0' + r);
-	_putchar('\n');
-    
-return (0);
+    _puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+    return (0);
 }
