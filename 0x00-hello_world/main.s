@@ -1,4 +1,3 @@
-.intel_syntax noprefix
 	.file	"main.c"
 	.intel_syntax noprefix
 	.text
