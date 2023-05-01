@@ -20,12 +20,12 @@ int _isdigit(char c)
  */
 int _strlen(char *s)
 {
-	int len = 0;
+int len = 0;
 
-	while (s[len])
-		len++;
+while (s[len])
+len++;
 
-	return (len);
+return (len);
 }
 
 /**
@@ -50,7 +50,7 @@ void mul(char *num1, char *num2)
 	{
 		carry = 0;
 		n1 = num1[i] - '0';
-	for (j = len2 - 1; j >= 0; j--)
+		for (j = len2 - 1; j >= 0; j--)
 		{
 			n2 = num2[j] - '0';
 			res = n1 * n2 + result[i + j + 1] + carry;
