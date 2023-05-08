@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
-
+#include "main.h"
 #define BUFFER_SIZE 1024
 
 /**
