@@ -23,7 +23,7 @@ return (NULL);
 p->n = n;
 p->prev = NULL;
 p->next = *head;
-	if(*head != NULL)
+	if (*head != NULL)
 		(*head)->prev = p;
 *head = p;
 
