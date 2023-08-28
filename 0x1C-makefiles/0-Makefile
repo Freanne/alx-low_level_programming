@@ -1,0 +1,21 @@
+# Makefile for the 'school' program
+# Usage: make -f 0-Makefile
+
+CC := gcc
+CFLAGS := -Wall -Wextra -pedantic -g
+
+# List of source files
+SOURCES := main.c school.c
+
+# Name of the executable
+EXECUTABLE := school
+
+# Default rule to build the executable
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(SOURCES)
+	$(CC) $(CFLAGS) $(SOURCES) -o $(EXECUTABLE)
+
+# Clean rule to remove the executable
+clean:
+	rm -f $(EXECUTABLE)
